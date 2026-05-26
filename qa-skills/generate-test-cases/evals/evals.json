@@ -1,0 +1,23 @@
+{
+  "skill_name": "generate-test-cases",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need test cases for a new 'Forgot Password' flow we're adding to our web app. Here's the TRD:\n- Users can click 'Forgot Password?' on the login page\n- Enter their registered email address\n- System sends a reset link valid for 60 minutes\n- Max 3 reset requests per email per hour (rate limiting)\n- After 3 failed attempts, send security notification email\nStack is React + Node.js REST API. This is a new feature. Focus on P0 and P1.\nTest case ID prefix: TC_PWD",
+      "expected_output": "Interview confirmation or skip (most info present), suite detection (Functional + Security + Smoke), BVA test cases for 60-min boundary (59min/60min/61min), DTT or BVA for rate limiting (3rd request succeeds, 4th blocked with 429), security notification trigger test, TC_PWD_XXX naming, both markdown and CSV formats, coverage map in summary",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write test cases for a new REST API endpoint we're adding:\nPOST /api/v1/users/{id}/profile-picture\n- Accepts JPEG, PNG, GIF\n- Max file size: 5MB\n- Dimensions: min 200x200px, max 2000x2000px\n- Stored in AWS S3\n- Requires auth (JWT Bearer token)\n- Returns 201 with image URL on success\nThis is a new endpoint. Tech stack: Django REST Framework. No UI, API only. All priorities.",
+      "expected_output": "Interview confirmation or skip, suite detection (Functional + Security + API Contract), BVA for file size (4.99MB/5MB/5.01MB), BVA for dimensions (199x199, 200x200, 201x201, 1999x1999, 2000x2000, 2001x2001), ECP for file formats (JPEG valid / PNG valid / GIF valid / PDF invalid / no file), security tests (no auth 401, expired token 401, wrong token 401), status code coverage (201/400/401/413), CSV block with header row",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Generate QA test cases for our new checkout feature:\n- Web app (React) + REST API backend\n- Users can add items to cart, enter shipping address, select payment (credit card via Stripe)\n- Supports promo codes (max 1 per order, 10-50% discount range)\n- Order confirmation email sent after payment\n- Existing cart feature is being modified to add the new checkout flow\nTech stack: React, Node.js, PostgreSQL. The payment flow handles sensitive data.\nPriority: all test cases. ID prefix: TC_CHECKOUT",
+      "expected_output": "Suite detection: Functional, Smoke (checkout is critical path), Security (payment/Stripe/PII), Regression (cart being modified), Cross-browser (web UI). DTT for promo code logic (valid code + in-range discount / expired code / multiple codes). BVA for discount range (9% / 10% / 11% / 49% / 50% / 51%). Smoke P0 test covering full checkout flow end-to-end. Regression tests for existing cart still working. TC_CHECKOUT_XXX naming. Coverage map with all changes mapped. Both markdown + CSV output.",
+      "files": []
+    }
+  ]
+}

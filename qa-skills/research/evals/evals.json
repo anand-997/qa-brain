@@ -1,0 +1,23 @@
+{
+  "skill_name": "research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Research the homepage of https://www.github.com — I want to understand all sections, features, and how different user types (logged out, logged in developer, team admin) experience it. Save the analysis to my desktop.",
+      "expected_output": "Standard Comprehensive mode detected (no special keywords). All 10 output sections covered. Clarification only for missing optional fields. WebFetch or Playwright used to visit the URL. File saved as Github_Homepage_Research_Analysis_YYYY-MM-DD.md. Section 2 covers: hero section, feature highlights, explore repos, trending, footer. Section 3 feature inventory includes: search, explore, trending, sign in/up CTAs, product pages. User workflow maps the logged-out user journey. Save confirmation with file path.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Analyze the login and registration page on https://www.figma.com from a QA testing perspective. I need to understand all testable features, validation rules, edge cases, and workflows so I can write test cases.",
+      "expected_output": "QA Testing Focus mode auto-detected from 'QA testing perspective' and 'write test cases'. Output uses QA Test Plan template (Template 5). Input Validation Map section covers: email field (format validation), password field (min length, complexity), required field behavior. User Workflows structured as test flows with edge cases and error paths. Integration points documented (OAuth: Google/GitHub login). Non-functional test areas listed. Offer to use generate-test-cases skill at the end. File saved as Figma_Login_QA_Analysis_YYYY-MM-DD.md.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Compare the checkout flow on https://www.amazon.in with https://www.flipkart.com. What are the differences in UX, features, and payment options?",
+      "expected_output": "Comparative mode auto-detected from 'compare' keyword. Both URLs researched independently. Feature Comparison Matrix table shows payment methods, address management, delivery options, order summary side-by-side. UX Pattern Comparison covers: number of steps, form complexity, CTA placement, error handling. Individual analysis sections for each site. Key takeaways identify which site does each dimension better. File saved as Amazon_vs_Flipkart_Comparison_YYYY-MM-DD.md.",
+      "files": []
+    }
+  ]
+}
