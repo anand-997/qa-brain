@@ -10,9 +10,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```
 qa-brain/
-├── selenium-skills/      # 4 skills — Selenium WebDriver 4.x + TestNG + Maven
-├── restassured-skills/   # 4 skills — REST Assured 5.4.0 + TestNG + Maven
-├── qa-skills/            # 2 skills — test case generation and requirements research
+├── selenium-skills/      # 5 skills — Selenium WebDriver 4.x + TestNG + Maven + git-ship
+├── restassured-skills/   # 5 skills — REST Assured 5.4.0 + TestNG + Maven + git-ship
+├── qa-skills/            # 3 skills — test case generation, requirements research, and git shipping
 └── .vscode/settings.json # Playwright MCP server (npx @executeautomation/playwright-mcp-server)
 ```
 
@@ -32,6 +32,9 @@ The `.history/` directory contains timestamped backups of old content — it is 
 | `/ra-lookup` | `restassured-skills/ra-lookup.md` | REST Assured syntax snippet |
 | `/generate-test-cases` | `qa-skills/generate-test-cases/` | Requirements → full test case coverage |
 | `/research` | `qa-skills/research/` | Analyze requirements or designs |
+| `/git-ship` | `qa-skills/git-ship/` | Stage → branch → commit → push with generated Conventional Commits message |
+| `/git-ship` | `selenium-skills/git-ship/` | (bundled) Same git-ship — included so the command travels with the Selenium skill pack |
+| `/git-ship` | `restassured-skills/git-ship/` | (bundled) Same git-ship — included so the command travels with the REST Assured skill pack |
 
 ## Two Skill File Formats
 

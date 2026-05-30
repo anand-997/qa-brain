@@ -18,6 +18,9 @@ There are no runnable files here — all content is Markdown skill definitions u
 | `create-test-module.md` | `/create-test-module` | Adding a **new resource** to an existing project from a cURL command — generates endpoint class, request/response POJOs, test class, JSON schema, suite XML, and api.properties entry |
 | `add-api-tests.md` | `/add-api-tests` | Adding tests for a **new HTTP operation** to an existing resource — generates only the new method, POJOs, and test class; provides a suite XML block to append |
 | `ra-lookup.md` | `/ra-lookup` | Quick RestAssured syntax reference — HTTP methods, auth, query/path params, Hamcrest matchers, Jackson annotations, TestNG annotations, content types |
+| `restassured-framework-bootstrap-rice-pot.md` | `/ra-bootstrap` | Fully self-contained bootstrap prompt — copy-paste into any AI tool (Claude, ChatGPT, Copilot) with no extra files needed |
+| `references/` | (auto-loaded) | Blueprint code, code patterns, and syntax snippets loaded on demand by the skills above — not invoked directly |
+| `git-ship/SKILL.md` | `/git-ship` | Stage → branch → commit → push with a generated Conventional Commits message and kebab-case branch name; works in any git repo |
 
 ## Technology Stack for Generated Code
 
@@ -58,6 +61,7 @@ New project?          → /create-restassured-framework
 New resource/module?  → /create-test-module   (provide cURL + test cases)
 New operation only?   → /add-api-tests         (provide cURL + test cases)
 Syntax question?      → /ra-lookup
+Ready to commit?      → /git-ship
 ```
 
 ## Content Update Rules
