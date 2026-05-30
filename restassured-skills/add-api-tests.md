@@ -1,6 +1,6 @@
 ---
 name: add-api-tests
-description: Add REST Assured tests to an existing module from a cURL or Postman command. Generates only the new endpoint method, POJOs, test class, and suite XML block needed — never touches existing framework classes. Use when a resource already exists in the project and you need to add more tests or a new HTTP operation.
+description: Add REST Assured tests to an existing module from a cURL command. Generates only the new endpoint method, POJOs, test class, and suite XML block — never touches framework classes.
 ---
 
 Generate REST Assured API test automation code for an **EXISTING project** following the exact patterns below.

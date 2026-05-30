@@ -1,3 +1,8 @@
+---
+name: ra-bootstrap
+description: Self-contained REST Assured + TestNG + Maven framework bootstrap prompt. Copy-paste into any AI tool — no extra files needed. Runs a 7-question interview then generates the complete framework.
+---
+
 # REST Assured Framework Bootstrap — RICE-POT Prompt (Self-Contained)
 
 ## How to Use
