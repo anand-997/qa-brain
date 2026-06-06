@@ -1,0 +1,11 @@
+node_modules/
+dist/
+output/
+.tmp/
+.env
+*.local
+.DS_Store
+npm-debug.log*
+vite.config.js.timestamp-*.mjs
+
+.vercel
