@@ -29,6 +29,39 @@ Production:
 npm run build && npm start
 ```
 
+## Deploy to Vercel
+
+This is a **monorepo** (several agents in one repo), so the one critical setting is the
+**Root Directory** — point it at `test-cases-generator-agent`. Vercel serves the Vite `dist/`
+statically and runs `api/*.js` as serverless functions; the Express `server.js` is for local dev.
+
+### Option A — Vercel Dashboard (no CLI)
+1. **vercel.com → Add New → Project**, import this GitHub repo.
+2. **Root Directory** → *Edit* → select **`test-cases-generator-agent`**. (Without this, Vercel
+   builds the repo root and the deploy fails.)
+3. Framework auto-detects **Vite** from `vercel.json` — leave build settings as-is.
+4. **Environment Variables** — add at least `GROQ_KEY`. Optional:
+   `ANTHROPIC_KEY`, `GITHUB_TOKEN`, `JIRA_URL`, `JIRA_EMAIL`, `JIRA_API_TOKEN`,
+   `ZOHO_URL`, `ZOHO_TOKEN`, `TRACKER`, `AI_PROVIDER`, `AI_MODEL`.
+   (Users may instead paste keys in the in-app **Settings** — sent per request, kept local.)
+5. **Deploy.**
+
+### Option B — Vercel CLI
+```bash
+npm i -g vercel
+vercel login
+vercel --cwd test-cases-generator-agent          # preview (links the project)
+vercel env add GROQ_KEY production
+vercel --cwd test-cases-generator-agent --prod   # production
+```
+
+### Serverless notes
+- `api/config.js` + `api/generate.js` mirror the Express routes. `api/save.js` returns `501`
+  (serverless FS is read-only) — use the client-side **Download .md/.csv/.txt** buttons instead.
+- `vercel.json` sets `maxDuration: 60` for `/api/generate`. On the **Hobby** plan functions cap at
+  **60s**; a very large requirement that auto-chunks into many batches may exceed that on one
+  request — for huge TRDs prefer local `npm start` (no timeout) or a Pro plan.
+
 ## How it works (A.N.T.)
 - **Layer 1 `architecture/`** — SOPs: `tracker-fetch.md`, `ai-generate.md`, `test-case-template.md`.
 - **Layer 2 `server.js`** — routes request → tracker/context → `generateTestCases` → md/csv/txt.
