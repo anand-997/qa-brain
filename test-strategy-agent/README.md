@@ -46,14 +46,14 @@ npm start          # server.js serves dist/ on http://localhost:8787
 
 ## Verify the credentials (optional)
 ```bash
-npm run handshake <JIRA-ID>     # e.g. npm run handshake VWO-48
+npm run handshake <JIRA-ID>     # e.g. npm run handshake TICKET-ID-101
 ```
 Prints PASS/FAIL for the Jira and GROQ connections.
 
 ## Using the app
 1. Open the app, go to **Settings**, and save your keys (or rely on `.env`).
 2. On **Generate**, pick a mode:
-   - **Jira ID** — enter a key like `VWO-48`.
+   - **Jira ID** — enter a key like `TICKET-ID-101`.
    - **Requirement / Context** — paste a requirement, or attach a `.txt` / `.md` file.
 3. Click **Generate** → review the 21-section strategy → **Download .md** (or **Save to server**,
    which writes to `output/` in dev).

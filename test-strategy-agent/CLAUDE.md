@@ -29,13 +29,13 @@ rendered on screen and downloadable as Markdown. UI supports **dark and light mo
 
 ### 3b. Generate request (frontend → proxy)
 ```json
-{ "jiraId": "VWO-48", "config": { "...": "see 3a (optional; falls back to .env)" } }
+{ "jiraId": "TICKET-ID-101", "config": { "...": "see 3a (optional; falls back to .env)" } }
 ```
 or `{ "context": "<pasted requirement / .txt / .md text>", "config": { } }`.
 
 ### 3c. Normalized issue (proxy internal — same shape for Jira and Context paths)
 ```json
-{ "key": "VWO-48", "summary": "string", "description": "string (ADF flattened)",
+{ "key": "TICKET-ID-101", "summary": "string", "description": "string (ADF flattened)",
   "issueType": "string", "status": "string", "priority": "string",
   "components": ["string"], "labels": ["string"], "fixVersions": ["string"],
   "reporter": "string", "assignee": "string | null" }

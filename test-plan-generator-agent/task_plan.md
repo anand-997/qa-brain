@@ -1,6 +1,6 @@
 # Task Plan — Jira → Test Plan Generator (BLAST)
 
-**Objective:** Lightweight React app: enter Jira config + GROQ key in Settings, give a Jira ID (e.g. `VWO-48`), auto-generate a formal Test Plan (on screen + downloadable `.md`).
+**Objective:** Lightweight React app: enter Jira config + GROQ key in Settings, give a Jira ID (e.g. `TICKET-ID-101`), auto-generate a formal Test Plan (on screen + downloadable `.md`).
 
 > Status legend: `[ ]` todo · `[~]` in progress · `[x]` done
 
@@ -19,7 +19,7 @@
 - [x] `tools/jiraClient.js` — fetch + normalize issue
 - [x] `tools/groqClient.js` — chat completion call
 - [x] `tools/handshake.js` — verify both connections (run once creds added)
-- [x] Live handshake PASS — Jira VWO-48 fetched + GROQ responded (2026-06-06)
+- [x] Live handshake PASS — Jira TICKET-ID-101 fetched + GROQ responded (2026-06-06)
 
 ## Phase 3 — A: Architect (3-layer)
 - [x] Layer 1 SOPs in `architecture/` (jira-fetch, groq-generate, test-plan-template)
@@ -40,11 +40,11 @@
 - [ ] Optional cloud deploy
 
 ## Done-when
-- `npm install && npm run dev`, open UI, enter creds + `VWO-48`, get a formal Markdown test plan.
+- `npm install && npm run dev`, open UI, enter creds + `TICKET-ID-101`, get a formal Markdown test plan.
 
 ## ✅ VERIFIED LIVE (2026-06-06)
 - Handshake PASS (Jira + GROQ).
-- `POST /api/generate {VWO-48}` → HTTP 200, full 13-section plan, 2293-byte Markdown.
-- `POST /api/save` → wrote `output/test-plan-VWO-48.md`.
+- `POST /api/generate {TICKET-ID-101}` → HTTP 200, full 13-section plan, 2293-byte Markdown.
+- `POST /api/save` → wrote `output/test-plan-TICKET-ID-101.md`.
 - Dev running: Express :8787 + Vite :5173.
 - Fix: `.env` uses `JIRA_API_TOKEN`; code now accepts `JIRA_API_TOKEN` || `JIRA_TOKEN`.

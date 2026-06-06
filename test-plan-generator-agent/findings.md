@@ -2,7 +2,7 @@
 
 ## Source objective (updated)
 - Build a lightweight React app. Settings hold Jira config (email, token, base URL) + GROQ API key.
-- Input a Jira ID (e.g. `VWO-48`) → fetch issue → generate Test Plan automatically.
+- Input a Jira ID (e.g. `TICKET-ID-101`) → fetch issue → generate Test Plan automatically.
 - GROQ model: `openai/gpt-oss-120b` (FREE).
 - Do NOT use the external `test-plan-create-skill`; use built-in QA test-plan knowledge.
 

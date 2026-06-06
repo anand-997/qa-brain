@@ -61,7 +61,7 @@ Example of the expected fill quality for a single section, given a "user login p
     | Version | 1.0 |
     | Status | Draft |
     | Author | QA Team |
-    | Requirement Source / Jira ID | VWO-48 |
+    | Requirement Source / Jira ID | TICKET-ID-101 |
     | Created Date | 06-Jun-2026 |
 
     ## 4. Scope

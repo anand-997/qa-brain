@@ -4,7 +4,7 @@ import TestStrategyView from './TestStrategyView.jsx';
 
 export default function Generator({ config, envStatus, goSettings }) {
   const [mode, setMode] = useState('jira'); // 'jira' | 'context'
-  const [jiraId, setJiraId] = useState('VWO-48');
+  const [jiraId, setJiraId] = useState('TICKET-ID-101');
   const [context, setContext] = useState('');
   const [fileName, setFileName] = useState('');
   const [loading, setLoading] = useState(false);
@@ -114,7 +114,7 @@ export default function Generator({ config, envStatus, goSettings }) {
               className="jira-input"
               value={jiraId}
               onChange={(e) => setJiraId(e.target.value)}
-              placeholder="VWO-48"
+              placeholder="TICKET-ID-101"
               spellCheck="false"
             />
             <button type="submit" className="primary" disabled={loading || !canSubmit}>

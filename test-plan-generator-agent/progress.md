@@ -40,11 +40,11 @@
 
 ## 2026-06-06 — LIVE RUN (creds added)
 - `.env` filled by user. **Bug:** key was `JIRA_API_TOKEN`, code read `JIRA_TOKEN` → patched `server.js` + `handshake.js` to accept both (self-anneal).
-- `npm run handshake` → **LINK OK ✅** (VWO-48: "Shopping cart total shows $0.00 after applying discount code"; GROQ `{"ok":true}`).
+- `npm run handshake` → **LINK OK ✅** (TICKET-ID-101: "Shopping cart total shows $0.00 after applying discount code"; GROQ `{"ok":true}`).
 - Killed stale procs holding :8787/:5173 (leftover run), restarted.
 - `npm run dev` → Express :8787 + Vite :5173 up.
-- `POST /api/generate {VWO-48}` → HTTP 200; objective re: discount code "SAVE20"; 4 in-scope, 4 strategy, 2 risks; 2293-byte Markdown.
-- `POST /api/save` → `output/test-plan-VWO-48.md` written.
+- `POST /api/generate {TICKET-ID-101}` → HTTP 200; objective re: discount code "SAVE20"; 4 in-scope, 4 strategy, 2 risks; 2293-byte Markdown.
+- `POST /api/save` → `output/test-plan-TICKET-ID-101.md` written.
 - Opened http://localhost:5173 in browser.
 
 ## Status: COMPLETE — end-to-end verified live.
