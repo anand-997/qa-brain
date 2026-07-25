@@ -16,7 +16,7 @@ const config = {
   groqKey: process.env.GROQ_KEY || '',
 };
 
-const jiraId = process.argv[2] || 'VWO-48';
+const jiraId = process.argv[2] || 'TICKET-ID-101';
 
 async function main() {
   let ok = true;

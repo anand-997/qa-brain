@@ -115,7 +115,7 @@ Examples:
 | `qa-skills/git-ship/SKILL.md` | `qa-skills` |
 | `src/auth/login.ts`, `src/auth/logout.ts` | `auth` |
 | `README.md`, `CLAUDE.md` | `root` |
-| `restassured-skills/ra-lookup.md` | `restassured-skills` |
+| `restassured-skills/ra-lookup/SKILL.md` | `restassured-skills` |
 
 ---
 

@@ -1,3 +1,8 @@
+<!-- Context: This is the fixed 21-section output template for the `/generate-test-strategy`
+skill (qa-skills/generate-test-strategy/). It is the authoritative structure that
+rice-pot-test-strategy-prompt.md must conform to — section order, headings, and numbering
+must never change. -->
+
 # Test Strategy for {{Feature / Application Name}}
 
 > Feature-agnostic test strategy template. Replace every `{{placeholder}}` with values for the

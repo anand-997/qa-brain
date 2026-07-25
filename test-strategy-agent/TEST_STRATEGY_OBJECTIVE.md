@@ -1,5 +1,5 @@
 # Fetch the JIRA ID/Context and Create a Test Plan Generator
-# VWO-48 -> Fetch Test Strategy
+# TICKET-ID-101 -> Fetch Test Strategy
 
 You please read the file of ABOUT_B.L.A.S.T.md and my Objective.md again, and create a lightweight React application which will take:
 - the Jira configuration

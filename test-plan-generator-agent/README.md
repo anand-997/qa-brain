@@ -1,6 +1,6 @@
 # Jira → Test Plan Generator (B.L.A.S.T.)
 
-Lightweight **React + Express** app. Enter your Jira config + a GROQ key, type a Jira ID (e.g. `VWO-48`), and get a **formal QA Test Plan** on screen and as a downloadable `.md`.
+Lightweight **React + Express** app. Enter your Jira config + a GROQ key, type a Jira ID (e.g. `TICKET-ID-101`), and get a **formal QA Test Plan** on screen and as a downloadable `.md`.
 
 Built with the **B.L.A.S.T.** protocol (Blueprint → Link → Architect → Stylize → Trigger) and the **A.N.T.** 3-layer architecture.
 
@@ -34,7 +34,7 @@ A proxy is required because Jira Cloud REST blocks browser CORS; it also keeps y
   Open http://localhost:5173
 - **Verify connections only** (Phase 2 — Link):
   ```
-  npm run handshake          # defaults to VWO-48
+  npm run handshake          # defaults to TICKET-ID-101
   npm run handshake ABC-123
   ```
 - **Production** (build then serve from Express):

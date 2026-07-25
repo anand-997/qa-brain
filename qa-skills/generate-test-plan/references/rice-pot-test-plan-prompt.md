@@ -1,5 +1,9 @@
 # RICE-POT Prompt: Test Plan Generator
 
+> Context: This is the copy-paste prompt bundled with the `/generate-test-plan` skill
+> (qa-skills/generate-test-plan/), written in the **RICE-POT** framework (see
+> [RICE_POT_FRAMEWORK.md](../../RICE_POT_FRAMEWORK.md)).
+
 Copy everything inside the code block below and paste it into your AI tool to generate a complete test plan.
 
 ```
@@ -114,7 +118,7 @@ Technical and professional. Formal QA enterprise documentation style. Write as i
 1. Copy the entire block above (everything between the triple backticks).
 2. Replace the `[INSERT ...]` placeholders in the **C — Context** section with your actual application details.
 3. Paste into Claude (or any capable AI tool).
-4. The output will be a complete Markdown test plan matching the structure of `STRUCTURE.md`.
+4. The output will be a complete Markdown test plan matching the 18-section structure defined in **Instructions** above.
 
 ---
 

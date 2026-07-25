@@ -8,7 +8,7 @@ Fetch a single Jira Cloud issue by ID and normalize it into the shape `testStrat
 
 ## Inputs
 - `config`: `{ jiraUrl, jiraEmail, jiraToken }`
-- `jiraId`: issue key, e.g. `VWO-48`
+- `jiraId`: issue key, e.g. `TICKET-ID-101`
 
 ## Logic
 1. Trim trailing slashes from `jiraUrl`; require URL, email, token, and id (throw clear errors).

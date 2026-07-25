@@ -1,5 +1,8 @@
 <!--
-📌 File: BRS_to_TRD_Prompt.md
+📌 File: qa-skills/generate-trd/references/brs-to-trd-prompt.md
+🧩 Parent Skill: generate-trd (SKILL.md) — this is the full, self-contained prompt the
+                skill reads before generating any TRD. It can also be copy-pasted directly
+                into any AI tool on its own, independent of the skill.
 🎯 Purpose: Convert any Business Requirements Specification (BRS/BRD) into a **master TRD**
                 with clearly separated Frontend and Backend requirements, optimised for
                 AI-driven engineering, tooling reuse, and LLM consumption.

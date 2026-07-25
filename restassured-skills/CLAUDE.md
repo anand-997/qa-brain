@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Directory Is
 
-`api-automation-prompts/` is the REST Assured API test automation knowledge hub within QA Brain. It contains Claude Code skill files for generating and maintaining Java-based API test automation projects.
+`restassured-skills/` is the REST Assured API test automation knowledge hub within QA Brain. It contains Claude Code skill folders for generating and maintaining Java-based API test automation projects.
 
 **Portability:** Copy this folder's contents into `<project>/.claude/skills/` to activate all skills in any project.
 
@@ -12,14 +12,15 @@ There are no runnable files here — all content is Markdown skill definitions u
 
 ## Skill Map
 
-| Skill File | Invoke With | Use When |
+Each skill below follows the standard `SKILL.md` + `references/` folder format (references loaded on demand by that skill only — not shared across skills).
+
+| Skill Folder | Invoke With | Use When |
 |------------|------------|----------|
-| `create-restassured-framework.md` | `/create-restassured-framework` | Starting a brand-new REST Assured + TestNG + Maven project — runs a 7-question interview then generates all 29 files (pom.xml, core classes, ExtentReports listener, config, suites, smoke test, schema, .gitignore) |
-| `create-test-module.md` | `/create-test-module` | Adding a **new resource** to an existing project from a cURL command — generates endpoint class, request/response POJOs, test class, JSON schema, suite XML, and api.properties entry |
-| `add-api-tests.md` | `/add-api-tests` | Adding tests for a **new HTTP operation** to an existing resource — generates only the new method, POJOs, and test class; provides a suite XML block to append |
-| `ra-lookup.md` | `/ra-lookup` | Quick RestAssured syntax reference — HTTP methods, auth, query/path params, Hamcrest matchers, Jackson annotations, TestNG annotations, content types |
-| `restassured-framework-bootstrap-rice-pot.md` | `/ra-bootstrap` | Fully self-contained bootstrap prompt — copy-paste into any AI tool (Claude, ChatGPT, Copilot) with no extra files needed |
-| `references/` | (auto-loaded) | Blueprint code, code patterns, and syntax snippets loaded on demand by the skills above — not invoked directly |
+| `create-restassured-framework/` | `/create-restassured-framework` | Starting a brand-new REST Assured + TestNG + Maven project — runs a 7-question interview then generates all 29 files (pom.xml, core classes, ExtentReports listener, config, suites, smoke test, schema, .gitignore) |
+| `create-test-module/` | `/create-test-module` | Adding a **new resource** to an existing project from a cURL command — generates endpoint class, request/response POJOs, test class, JSON schema, suite XML, and api.properties entry |
+| `add-api-tests/` | `/add-api-tests` | Adding tests for a **new HTTP operation** to an existing resource — generates only the new method, POJOs, and test class; provides a suite XML block to append |
+| `ra-lookup/` | `/ra-lookup` | Quick RestAssured syntax reference — HTTP methods, auth, query/path params, Hamcrest matchers, Jackson annotations, TestNG annotations, content types |
+| `restassured-framework-bootstrap-rice-pot.md` | `/ra-bootstrap` | Fully self-contained bootstrap prompt (flat file, by design) — copy-paste into any AI tool (Claude, ChatGPT, Copilot) with no extra files needed |
 | `git-ship/SKILL.md` | `/git-ship` | Stage → branch → commit → push with a generated Conventional Commits message and kebab-case branch name; works in any git repo |
 
 ## Technology Stack for Generated Code

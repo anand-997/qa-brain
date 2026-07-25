@@ -3,7 +3,7 @@
 > Single source of architectural truth. `gemini.md` is **law**; the planning files are memory.
 
 ## 1. Mission
-A lightweight **React app + Express proxy** that takes Jira config + a GROQ key in **Settings**, fetches a Jira issue by ID (e.g. `VWO-48`), and auto-generates a **formal QA Test Plan** rendered on screen and downloadable as Markdown.
+A lightweight **React app + Express proxy** that takes Jira config + a GROQ key in **Settings**, fetches a Jira issue by ID (e.g. `TICKET-ID-101`), and auto-generates a **formal QA Test Plan** rendered on screen and downloadable as Markdown.
 
 ## 2. Integrations
 | Service | Use | Endpoint | Auth |
@@ -29,13 +29,13 @@ A lightweight **React app + Express proxy** that takes Jira config + a GROQ key 
 
 ### 3b. Generate request (frontend → proxy)
 ```json
-{ "jiraId": "VWO-48", "config": { "...": "see 3a (optional; falls back to .env)" } }
+{ "jiraId": "TICKET-ID-101", "config": { "...": "see 3a (optional; falls back to .env)" } }
 ```
 
 ### 3c. Normalized Jira issue (proxy internal)
 ```json
 {
-  "key": "VWO-48",
+  "key": "TICKET-ID-101",
   "summary": "string",
   "description": "string (ADF flattened to text)",
   "issueType": "Story | Bug | Task | ...",
@@ -52,10 +52,10 @@ A lightweight **React app + Express proxy** that takes Jira config + a GROQ key 
 ### 3d. Test Plan payload (GROQ JSON output → deterministic Markdown)
 ```json
 {
-  "testPlanId": "TP-VWO-48-001",
+  "testPlanId": "TP-TICKET-ID-101-001",
   "version": "1.0",
   "date": "string | TBD",
-  "sourceIssue": "VWO-48",
+  "sourceIssue": "TICKET-ID-101",
   "title": "Test Plan — <summary>",
   "testingItem": "string",
   "objective": "string",

@@ -166,13 +166,13 @@ Pattern: Endpoint → Model → Service + Listener-based Reporting
 
 Load the reference files below when generating each group of files. Use every class verbatim (substituting project values per Phase 2 rules).
 
-- **Core classes** (files 1–6): `restassured-skills/references/framework-blueprints-core.md`
+- **Core classes** (files 1–6): `references/framework-blueprints-core.md`
   Contains: pom.xml, ConfigManager.java, BaseAPI.java, BaseTest.java, TokenManager.java, RequestResponseCapture.java
 
-- **Utility & listener classes** (files 7–13): `restassured-skills/references/framework-blueprints-utils.md`
+- **Utility & listener classes** (files 7–13): `references/framework-blueprints-utils.md`
   Contains: SchemaValidator.java, RandomDataGenerator.java, ExtentTestManager.java, JsonUtils.java, TestListener.java, RetryAnalyzer.java, RetryTransformer.java
 
-- **Config, build & suite files** (files 16–26, 29): `restassured-skills/references/framework-blueprints-config.md`
+- **Config, build & suite files** (files 16–26, 29): `references/framework-blueprints-config.md`
   Contains: config.properties, api.properties, auth.properties, data.properties, routes.properties, log4j2.xml, smoke-api-suite.xml, regression-api-suite.xml, .gitignore
 
 ---

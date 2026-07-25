@@ -8,7 +8,7 @@ Retrieve a single Jira Cloud issue and normalize it to a flat object the test-pl
 ## Inputs
 - `config.jiraUrl` — e.g. `https://your-domain.atlassian.net` (trailing slashes stripped).
 - `config.jiraEmail`, `config.jiraToken` — Basic auth pair.
-- `jiraId` — issue key, e.g. `VWO-48`.
+- `jiraId` — issue key, e.g. `TICKET-ID-101`.
 
 ## Logic
 1. Build `GET {jiraUrl}/rest/api/3/issue/{key}?fields=...` (only the fields we render).
