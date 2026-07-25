@@ -4,15 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repository Is
 
-**QA Brain** is a library of 10 portable Claude Code skills for QA engineers. There is no runnable application, no build system, and no test commands. All content is Markdown skill definitions and their bundled reference files.
+**QA Brain** is a library of 16 portable Claude Code skills for QA engineers. There is no runnable application, no build system, and no test commands. All content is Markdown skill definitions and their bundled reference files.
 
 ## Active Skill Directories
 
 ```
 qa-brain/
-├── selenium-skills/      # 5 skills — Selenium WebDriver 4.x + TestNG + Maven + git-ship
-├── restassured-skills/   # 5 skills — REST Assured 5.4.0 + TestNG + Maven + git-ship
-├── qa-skills/            # 4 skills — test case generation, requirements research, CI workflow generation, and git shipping
+├── selenium-skills/      # 4 skills + git-ship — Selenium WebDriver 4.x + TestNG + Maven
+├── restassured-skills/   # 4 skills + git-ship — REST Assured 5.4.0 + TestNG + Maven
+├── qa-skills/            # 7 skills + git-ship — test case/TRD/test-strategy/test-plan generation,
+│                         #   requirements research, RICE-POT prompt generation, CI workflow generation
 └── .vscode/settings.json # Playwright MCP server (npx @executeautomation/playwright-mcp-server)
 ```
 
@@ -26,11 +27,15 @@ The `.history/` directory contains timestamped backups of old content — it is 
 | `/create-page-objects` | `selenium-skills/create-page-objects/` | URL/HTML → Page Object class |
 | `/add-ui-tests` | `selenium-skills/add-ui-tests/` | Feature → TestNG test class + suite XML |
 | `/selenium-lookup` | `selenium-skills/selenium-lookup/` | Selenium/Playwright syntax snippet |
-| `/create-restassured-framework` | `restassured-skills/create-restassured-framework.md` | Interview → 29-file REST Assured project |
-| `/create-test-module` | `restassured-skills/create-test-module.md` | cURL → new resource module |
-| `/add-api-tests` | `restassured-skills/add-api-tests.md` | cURL + cases → new test class |
-| `/ra-lookup` | `restassured-skills/ra-lookup.md` | REST Assured syntax snippet |
+| `/create-restassured-framework` | `restassured-skills/create-restassured-framework/` | Interview → 29-file REST Assured project |
+| `/create-test-module` | `restassured-skills/create-test-module/` | cURL → new resource module |
+| `/add-api-tests` | `restassured-skills/add-api-tests/` | cURL + cases → new test class |
+| `/ra-lookup` | `restassured-skills/ra-lookup/` | REST Assured syntax snippet |
 | `/generate-test-cases` | `qa-skills/generate-test-cases/` | Requirements → full test case coverage |
+| `/generate-trd` | `qa-skills/generate-trd/` | BRS/BRD → implementation-ready TRD with FE/BE separation |
+| `/generate-test-strategy` | `qa-skills/generate-test-strategy/` | Requirement → 21-section enterprise Test Strategy doc (RICE-POT) |
+| `/generate-test-plan` | `qa-skills/generate-test-plan/` | API/application → 18-section enterprise Test Plan doc (RICE-POT) |
+| `/generate-ricepot-prompt` | `qa-skills/generate-ricepot-prompt/` | Task description → new RICE-POT-structured prompt (optionally scaffolds a full skill folder) |
 | `/research` | `qa-skills/research/` | Analyze requirements or designs |
 | `/create-ci-workflow` | `qa-skills/create-ci-workflow/` | Analyze repo (UI/API/hybrid) → GitHub Actions workflow with IST cron + manual dropdown trigger (branch/env/test-type), downloadable Extent report artifact, and SMTP email |
 | `/git-ship` | `qa-skills/git-ship/` | Stage → branch → commit → push with generated Conventional Commits message |
@@ -39,7 +44,7 @@ The `.history/` directory contains timestamped backups of old content — it is 
 
 ## Two Skill File Formats
 
-**Format A — subdirectory with SKILL.md + references/** (selenium-skills, qa-skills):
+**Format A — subdirectory with SKILL.md + references/** (selenium-skills, qa-skills, restassured-skills):
 ```
 skill-name/
 ├── SKILL.md           ← YAML frontmatter (name, description) + instructions
@@ -47,12 +52,14 @@ skill-name/
     └── *.md           ← large reference files loaded on demand
 ```
 
-**Format B — flat .md file with YAML frontmatter** (restassured-skills):
+**Format B — flat .md file with YAML frontmatter** (exception, not the default):
 ```
 skill-name.md          ← YAML frontmatter + full instructions + blueprints inline
 ```
+Reserved for prompts that are explicitly designed to be fully self-contained and copy-pasted
+into any AI tool with zero extra files (e.g. `restassured-skills/restassured-framework-bootstrap-rice-pot.md`).
 
-Use Format A when reference content exceeds ~300 lines or needs to be selectively loaded. Use Format B when all content fits comfortably in one file.
+Use Format A when reference content exceeds ~300 lines or needs to be selectively loaded. Use Format B only when the whole point of the file is that it needs no companion files at all.
 
 ## SKILL.md Frontmatter
 

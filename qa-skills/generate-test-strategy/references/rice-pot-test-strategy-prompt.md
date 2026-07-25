@@ -1,8 +1,10 @@
 # Test Strategy Generator — RICE-POT Prompt
 
-A ready-to-use prompt, written in the **RICE-POT** framework
-(see [RICE_POT_FRAMEWORK.md](RICE_POT_FRAMEWORK.md)), that turns a feature requirement into a
-complete test strategy following [TEST_STRATEGY_TEMPLATE.md](TEST_STRATEGY_TEMPLATE.md).
+> Context: This is the copy-paste prompt bundled with the `/generate-test-strategy` skill
+> (qa-skills/generate-test-strategy/). It is written in the **RICE-POT** framework (see
+> [RICE_POT_FRAMEWORK.md](../../RICE_POT_FRAMEWORK.md)) and turns a feature requirement into
+> a complete test strategy following
+> [test-strategy-template.md](test-strategy-template.md).
 
 **How to use:** paste everything inside the code block below into your AI tool, attach the
 requirement (Jira ID / plain text / `.txt` / `.md`) and the template file, then run.
@@ -19,7 +21,7 @@ coverage, traceability, and measurable quality gates.
 2. Parse the feature: identify what is being built, the user/business goals, the workflows,
    the interfaces (UI/API/data), and any integrations or constraints stated.
 3. Generate a complete test strategy that EXACTLY follows the structure of the attached
-   `TEST_STRATEGY_TEMPLATE.md` — all 21 sections, in the same order, with the same headings
+   `test-strategy-template.md` — all 21 sections, in the same order, with the same headings
    and numbering.
 4. Replace every `{{placeholder}}` with a concrete value derived from the requirement.
 5. Keep every section. If a section has no applicable content for this feature, retain the
@@ -44,7 +46,7 @@ Do NOT:
 ### C — Context
 - This prompt feeds a "Test Strategy Buddy" style generator: input is a feature requirement,
   output is a strategy document in a fixed, feature-agnostic template.
-- The template (`TEST_STRATEGY_TEMPLATE.md`) is feature-agnostic with `{{placeholders}}` and
+- The template (`test-strategy-template.md`) is feature-agnostic with `{{placeholders}}` and
   example blockquotes; it is the authoritative structure you must conform to.
 - The strategy may describe any feature (e.g. a login page, a dashboard, a payments flow, a
   REST API), so tailor levels, tools, focus areas, and risks to what the requirement implies.
@@ -87,7 +89,7 @@ Example of the expected fill quality for a single section, given a "user login p
 
 ### O — Output
 - Format: Markdown only.
-- Structure: the exact 21 sections of `TEST_STRATEGY_TEMPLATE.md`, in order, with identical
+- Structure: the exact 21 sections of `test-strategy-template.md`, in order, with identical
   headings and numbering (Document Control → … → Approval & Sign-off).
 - All `{{placeholders}}` replaced; template example blockquotes removed or replaced with
   feature-specific content.

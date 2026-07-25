@@ -343,7 +343,7 @@ RULE 3 — BOUNDARIES IN @DataProvider: Every negative/boundary DataProvider MUS
   ("A".repeat(256),             ...) → oversized
   ("<script>alert(1)</script>",  ...) → XSS injection
   ("'; DROP TABLE t;--",         ...) → SQL injection
-  ("!@#$%^&*()",                ...) → special characters
+  ("!@#$%^&*()",                 ...) → special characters
 
 AVAILABLE RandomDataGenerator METHODS — use only these:
   fullName() | firstName() | lastName() | username()

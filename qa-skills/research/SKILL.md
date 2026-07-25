@@ -213,7 +213,7 @@ What would you like next?
 1. Deep dive into a specific section (which one?)
 2. Generate test cases from this analysis → use /generate-test-cases
 3. Comparative analysis vs. a competitor
-4. Create a TRD from these findings → reference qa-skills/generate-trd.md
+4. Create a TRD from these findings → use /generate-trd
 5. Re-run with a different analysis mode
 ```
 

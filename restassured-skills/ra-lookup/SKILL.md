@@ -9,7 +9,7 @@ Match the user's question to the relevant section and return only the applicable
 
 ---
 
-Load `restassured-skills/references/ra-snippets.md` for all ready-to-use code snippets:
+Load `references/ra-snippets.md` for all ready-to-use code snippets:
 - HTTP Methods (GET, POST, PUT, DELETE, PATCH)
 - Headers, Query Parameters, Path Parameters
 - Extract JSON values, Inline Assertions (Hamcrest)

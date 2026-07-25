@@ -56,7 +56,7 @@ Action:   [e.g., Create]        ← PascalCase, prefix for test class name
 STEP 4: GENERATE CODE COMPONENTS
 ═══════════════════════════════════════════════════════════════════
 
-Load `restassured-skills/references/test-module-patterns.md` for the complete code patterns (A through G):
+Load `references/test-module-patterns.md` for the complete code patterns (A through G):
 - A. Endpoint class pattern (extends BaseAPI, captureRequest/captureResponse, instance methods)
 - B. Request POJO pattern (@Data @Builder @NoArgsConstructor @AllArgsConstructor + @JsonProperty)
 - C. Response POJO pattern (@Data @NoArgsConstructor + @JsonIgnoreProperties, includes ErrorResponse)
